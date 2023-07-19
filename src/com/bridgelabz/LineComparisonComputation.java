@@ -17,7 +17,7 @@ public class LineComparisonComputation {
         int y2 = scanner.nextInt();
 
         double lengthOfLine1 = Math.sqrt(Math.pow((x2-x1),2) + Math.pow((y2-y1),2));
-        System.out.println("Length of a Line = "+lengthOfLine1);
+        System.out.println("Length of a Line1= "+lengthOfLine1);
 //UC2: check equality of two lines
         System.out.print("Enter the value of x3 : ");
         int x3 = scanner.nextInt();
@@ -29,14 +29,22 @@ public class LineComparisonComputation {
         int y4 = scanner.nextInt();
 
         double lengthOfLine2 = Math.sqrt(Math.pow((x4-x3),2) + Math.pow((y4-y3),2));
-        System.out.println("Length of a Line = "+lengthOfLine2);
+        System.out.println("Length of a Line2 = "+lengthOfLine2);
 
         String line1 = String.valueOf(lengthOfLine1);
         String line2 = String.valueOf(lengthOfLine2);
 
         if (line1.equals(line2)){
-            System.out.println("Two Lines are Equal.");
+            System.out.println("Two Lines are Equal");
         } else
-            System.out.println("Two Lines are NOT equal.");
+            System.out.println("Two Lines are NOT equal");
+
+//UC3: compare two lines using CompareTo method
+        if (line1.compareTo(line2) == 0) {
+            System.out.println("Two Lines are EQUAL");
+        } else if (line1.compareTo(line2) > 0) {
+            System.out.println("Line1 is greater than Line2");
+        } else
+            System.out.println("Line1 is lesser than Line2");
     }
 }
